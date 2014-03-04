@@ -17,7 +17,7 @@ class WebscrapSpider(CrawlSpider):
   def parse_movie(self, response):
     self.log("Hi, this is an item page! %s" % response.url)
   
-  def parse(self, response):
+  def parse_item(self, response):
 #    self.log("Hi, this is an item page! %s" % response.url)
     hxs = HtmlXPathSelector(response)
     sites = hxs.select('//tr/td')
